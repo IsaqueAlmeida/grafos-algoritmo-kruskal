@@ -8,8 +8,7 @@ class Grafo:
         self._lista_de_adjacencias = dict()
         self.orientado = orientado
 
-    def vertices(self):
-        # retorna os nomes dos vertices
+    def vertices(self):  # retorna os nomes dos vertices
         return set(self._lista_de_adjacencias.keys())
 
     def arestas(self, v_origem=None):
@@ -17,7 +16,6 @@ class Grafo:
         if v_origem:
             # obtem arestas do vértices
             return self.v_arestas(v_origem)
-
         # retorna as arestas do grafo inteiro
         arestas_do_grafo = []
         for v_origem in self.vertices():
